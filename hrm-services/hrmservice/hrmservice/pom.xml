@@ -47,7 +47,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>eureka-server</finalName>
+        <finalName>hrm-eureka-server</finalName>
     </build>
 
 </project>

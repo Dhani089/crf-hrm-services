@@ -1,4 +1,4 @@
-package com.hrm.hrmsecurity;
+package com.emp.employeeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,16 +9,15 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class HrmsecurityApplication {
+public class EmployeeserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrmsecurityApplication.class, args);
+		SpringApplication.run(EmployeeserviceApplication.class, args);
 	}
-	
+
 	 @Bean
 	 @LoadBalanced
 	 public RestTemplate getRestTemplate() {
 	      return new RestTemplate();
 	   }
-
 }

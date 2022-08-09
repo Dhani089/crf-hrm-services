@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.javadeveloperzone</groupId>
-    <artifactId>user-service</artifactId>
+    <artifactId>hrmsecurity</artifactId>
     <version>1.0.0</version>
-    <name>spring-microservice-user-service</name>
-    <description>Sprig boot microservice user service</description>
+    <name>spring-microservice-hrm-security-service</name>
+    <description>Sprig boot microservice hrm security service</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
@@ -136,6 +136,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>user-service</finalName>
+        <finalName>hrm-security-service</finalName>
     </build>
 </project>
