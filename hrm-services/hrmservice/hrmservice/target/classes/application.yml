@@ -12,3 +12,6 @@ eureka:
     eviction-interval-timer-in-ms: 1000
     enable-self-preservation: false
     renewalPercentThreshold: 0.33
+logging:
+  pattern:
+    console:

@@ -25,11 +25,16 @@ public class JwtUserDetailsService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		ResponseEntity<Employee> result= null;
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("username", username);
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
-		ResponseEntity<Employee> result = restTemplate.exchange("http://hrm-employee-service/userdetails", HttpMethod.GET, entity,
-				Employee.class);
+		try {
+			result = restTemplate.exchange("http://hrm-employee-service/userdetails", HttpMethod.GET, entity,
+					Employee.class);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		Employee emp= result.getBody();
 		//Employee emp = repositoryDetailsRepository.findByUsername(username);
 		if (emp.getUsername().equals(username)) {

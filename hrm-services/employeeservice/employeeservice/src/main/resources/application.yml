@@ -2,16 +2,10 @@ spring:
   application:
     name: hrm-employee-service
   datasource:
-    url: jdbc:h2:mem:mydb
-    username: dhani
-    password: ds
-    driverClassName: org.h2.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled : true
-      path : /h2-ui
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: BRF_SSD
+    password: admin
+    driverClassName:  oracle.jdbc.OracleDriver   
 server:
   port: 8085
 eureka:

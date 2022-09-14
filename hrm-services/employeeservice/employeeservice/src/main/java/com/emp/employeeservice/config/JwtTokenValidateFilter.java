@@ -25,7 +25,7 @@ public class JwtTokenValidateFilter extends OncePerRequestFilter {
 	@Override
 	protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
 		String path = request.getServletPath();
-		return !path.startsWith("/emp");
+		return path.startsWith("/userdetails");
 
 	}
 

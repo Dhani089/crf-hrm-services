@@ -32,8 +32,9 @@ public class HelloWorldController {
 	@GetMapping("/emp/{id}")
 	public ResponseEntity<Employee> getTutorialById(@PathVariable("id") long id) {
 		Optional<Employee> tutorialData = employeerepository.findById(id);
+		Employee  emp=tutorialData.get();
 		if (tutorialData.isPresent()) {
-			return new ResponseEntity<>(tutorialData.get(), HttpStatus.OK);
+			return new ResponseEntity<>(emp, HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
